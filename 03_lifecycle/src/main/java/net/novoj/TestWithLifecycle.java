@@ -46,18 +46,11 @@ public class TestWithLifecycle {
 			final int[] randomIntegers = randomData == null ? new int[source.intCount] : randomData;
 			for (int i = 0; i < source.intCount; i++) {
 				source.stream.read(futureInt);
-				randomIntegers[i] = bytesToInt(futureInt);
+				randomIntegers[i] = NumberUtils.bytesToInt(futureInt);
 			}
 			randomData = randomIntegers;
 		}
 
-		private static int bytesToInt(byte[] futureInt) {
-			int theInt = 0;
-			for (byte b : futureInt) {
-				theInt = (theInt << 8) + (b & 0xFF);
-			}
-			return theInt;
-		}
 	}
 
 	@Benchmark
