@@ -9,10 +9,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * Inspired by: https://github.com/openjdk/jmh/blob/master/jmh-samples/src/main/java/org/openjdk/jmh/samples/JMHSample_10_ConstantFold.java
  *
- * Benchmark                                    Mode  Cnt  Score   Error  Units
- * ConstantFoldingExampleBenchmark.testMethod   avgt       0.411          ns/op
- * ConstantFoldingExampleBenchmark.testMethod2  avgt       0.689          ns/op
- * ConstantFoldingExampleBenchmark.testMethod3  avgt       0.654          ns/op
+ * Benchmark                                           Mode  Cnt  Score   Error  Units
+ * ConstantFoldingExampleBenchmark.correct             avgt       0.640          ns/op
+ * ConstantFoldingExampleBenchmark.correctAlternative  avgt       0.681          ns/op
+ * ConstantFoldingExampleBenchmark.wrong               avgt       0.409          ns/op
  */
 @Measurement(iterations = 1)
 @Warmup(iterations = 1, time = 5)
@@ -30,17 +30,17 @@ public class ConstantFoldingExampleBenchmark {
     }
 
     @Benchmark
-    public void testMethod(MyState state) {
+    public void wrong(MyState state) {
         int sum = state.a + state.b;
     }
 
     @Benchmark
-    public int testMethod2(MyState state) {
+    public int correct(MyState state) {
         return state.a + state.b;
     }
 
     @Benchmark
-    public void testMethod3(Blackhole blackhole, MyState state) {
+    public void correctAlternative(Blackhole blackhole, MyState state) {
         blackhole.consume(state.a + state.b);
     }
 

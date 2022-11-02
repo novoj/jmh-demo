@@ -40,8 +40,6 @@ import java.util.concurrent.TimeUnit;
  * LoopingExampleBenchmark.measureWrong_1000    avgt       0.029          ns/op
  * LoopingExampleBenchmark.measureWrong_10000   avgt       0.025          ns/op
  * LoopingExampleBenchmark.measureWrong_100000  avgt       0.027          ns/op
- *
- * @author Jan Novotný (novotny@fg.cz), FG Forrest a.s. (c) 2022
  */
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
