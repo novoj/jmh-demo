@@ -16,7 +16,7 @@ public class BenchmarkRunner {
 	public static void main(String[] args) throws Exception {
 		Options opt = new OptionsBuilder()
 			.include(JavaUuidTest.class.getName())
-			.forks(0)
+			.forks(1)
 			.threads(1)
 			.warmupTime(TimeValue.seconds(10))
 			.warmupIterations(1)
