@@ -5,7 +5,7 @@ package net.novoj;
  *
  * @author Jan Novotný (novotny@fg.cz), FG Forrest a.s. (c) 2022
  */
-public class Benchmark {
+public class BenchmarkRunnerA {
 
 	public static void main(String[] args) throws Exception {
 		org.openjdk.jmh.Main.main(args);

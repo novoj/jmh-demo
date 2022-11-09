@@ -104,7 +104,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
                             <finalName>${uberjar.name}</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>net.novoj.Benchmark</mainClass>
+                                    <mainClass>net.novoj.BenchmarkRunnerA</mainClass>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>

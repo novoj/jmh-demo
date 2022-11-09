@@ -6,11 +6,11 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.openjdk.jmh.runner.options.TimeValue;
 
 /**
- * A class that will execute all the benchmarks.
+ * A class executing all the benchmarks.
  *
  * @author Jan Novotný (novotny@fg.cz), FG Forrest a.s. (c) 2022
  */
-public class BenchmarkRunner {
+public class BenchmarkRunnerB {
 
 	public static void main(String[] args) throws Exception {
 		Options opt = new OptionsBuilder()
